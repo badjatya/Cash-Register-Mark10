@@ -35,6 +35,10 @@ const App = () => {
       setMessage("Yayyy! You paid the exact bill amount");
       setVisible(false);
       return;
+    } else if (Number(cashPaid) === 0 || Number(billAmount) === 0) {
+      setMessage("Please enter amount and cash paid");
+      setVisible(false);
+      return;
     } else {
       setMessage(null);
       setVisible(true);
